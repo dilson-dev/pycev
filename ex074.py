@@ -6,26 +6,31 @@ Depois disso, mostre a listagem de números gerados e também indique o menor e 
 """
 
 from random import randint
+# from random import sample
 
-nums = ()
-maiornum = menornum = 0
+limitnums = int(input('\nDigite até qual número quer sortear: '))
+quantnums = int(input('\nQuantos números quer sortear? '))
+
+'''
+nums = tuple(sample(range(limitnums + 1), quantnums))
+print()
+for num in nums:
+    print(num, end=' ')
+'''
+
+nums = ()  # nums = (randint(0, 10), randint(0, 10), randint(0, 10), randint(0, 10), randint(0, 10))
+# maiornum = menornum = 0
 
 print(f'\nValores sorteados:', end=' ')
 
-for c in range(5):
-    nums += randint(0, 10),
+for c in range(quantnums):
+    nums += randint(0, limitnums),
     print(nums[c], end=' ')
+    """
     if nums[c] > maiornum or c == 0:
         maiornum = nums[c]
     if nums[c] < menornum or c == 0:
         menornum = nums[c]
+    """
 
-'''
-from random import sample
-a = tuple(sample(range(10), 5))
-print(a)
-print(f'O maior valor é {max(a)} e o menor é {min(a)}.')
-'''
-
-print(f'\n\nMaior número: {maiornum}.')
-print(f'Menor número: {menornum}.')
+print(f'\n\nMaior número: {max(nums)}.\nMenor número: {min(nums)}.')

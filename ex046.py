@@ -3,6 +3,7 @@
 from time import sleep
 from emoji import emojize
 from playsound import _playsoundWin
+
 '''
 print('\n\033[1;30mContagem regressiva para o estouro dos fogos de artíficio.\033[m\n')
 for c in range(10, -1, -1):

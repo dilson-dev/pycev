@@ -7,22 +7,33 @@ B) Em que posição foi digitado o primeiro valor 3;
 C) Quais foram os números pares.
 """
 
-nums = pares = ()  # nums = int(input('Digite um valor: ')), # pares = nums[0] if nums[0] % 2 == 0 else '',
+# nums = ()
 
-for c in range(4):
-    nums += int(input(f'Digite outro valor: ')),
-    pares += nums[c] if nums[c] % 2 == 0 else '',
+'''
+nums = (int(input('Digite um valor: ')), 
+        int(input('Digite outro valor: ')),
+        int(input('Digite mais um valor: ')),
+        int(input('Digite o último valor: ')))
+'''
 
-print(f'Você digitou os valores: {nums}.')
-print(f'Vezes que o nº 9 foi digitado: {nums.count(9)}.')
+nums = tuple(int(input(f'Digite o {i + 1}º numero: ')) for i in range(4))
+
+'''for c in range(1, 5):
+    nums += int(input(f'\nDigite o {c}º valor: ')),'''
+
+print(f'\nVocê digitou os valores: {nums}.')
+print(f'\nVezes que o nº 9 foi digitado: {nums.count(9)}.')
 if 3 in nums:
-    print(f'Posição que foi digitado o primeiro valor 3: {nums.index(3) + 1}.')
+    print(f'Posição que foi digitado o primeiro valor 3: {nums.index(3) + 1}ª.')
 else:
-    print(f'O valor 3 não foi digitado, portanto não se encontra em nenhuma posição.')
-print('Valores pares:', end=' ')
+    print('O valor 3 não foi digitado, portanto não se encontra em nenhuma posição.')
 
-# print(pares[c] for c in range(len(pares)) if pares[c] % 2 == 0)
+print('Valores pares:', ' '.join(str(num) for num in nums if num % 2 == 0))
 
-for c in range(4):
-    if pares[c] != '':  # pares[c].isnumeric()
-        print(pares[c], end=' ')
+'''
+for num in nums:
+    if num % 2 == 0:
+        print(num, end=' ')
+'''
+
+print()
