@@ -1,3 +1,18 @@
+# Links úteis
+
+- [Download do Python 3](https://www.python.org/downloads/)
+- [Download do Pycharm](https://www.jetbrains.com/pycharm/download/)
+
+
+## Playlists e Canal Curso em Vídeo
+
+- [Canal Curso em Vídeo](https://www.youtube.com/cursoemvideo)
+- [Mundo 1: Fundamentos](https://www.youtube.com/playlist?list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6)
+- [Mundo 2: Estruturas de Controle](https://www.youtube.com/playlist?list=PLHz_AreHm4dk_nZHmxxf_J0WRAqy5Czye)
+- [Mundo 3: Estruturas Compostas](https://www.youtube.com/watch?v=0LB3FSfjvao&list=PLHz_AreHm4dksnH2jVTIVNviIMBVYyFnH)
+- [Exercícios de Python 3](https://www.youtube.com/watch?v=nIHq1MtJaKs&list=PLHz_AreHm4dm6wYOIW20Nyg12TAjmMGT-)
+
+
 ## Bibliotecas/módulos/packages instaladas:
 
 - emoji versão 0.5.4
@@ -5,7 +20,7 @@
 
 
 
-## Exercícios do Curso de Python do Canal do Youtube Curso em Vídeo
+## Exercícios
 
 ### Mundo 1
 
