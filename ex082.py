@@ -7,32 +7,38 @@ respectivamente.
 
 Ao final, mostre o conteúdo doas três listas geradas.
 """
-nums = list()
-numspares = []
-numsimpares = []
+nums = []
+pares = []
+impares = []
 
 while True:
-    num = int(input('\nDigite um valor: '))
-    nums.append(num)  # nums.append(int(input('\nDigite um valor: '))
-    '''
-    if num % 2 == 0:
-        numspares.append(num)
+    nums += [int(input('\nDigite um valor: '))]
+    if nums[-1] % 2 == 0:
+        pares += [nums[-1]]
     else:
-        numsimpares.append(num)
-    '''
-    res = ' '
-    while res not in 'SN' and res != '':
-        res = input('Quer continuar? [S/N] ').strip().upper()[0]
-    if res == 'N':
+        impares += [nums[-1]]
+    res = ''
+    while res == '' or res[0] not in 'SN':
+        res = input('Quer continuar? [S/N] ').strip().upper()
+    if res[0] == 'N':
         break
 
-for num in nums:
-    if num % 2 == 0:
-        numspares += [num]
-    else:
-        numsimpares += [num]
+listas = []
+for lista in [nums, pares, impares]:
+    listas += [str(lista).replace('[', '').replace(']', '')]
 
-print()
-print('=-' * 35)
-print(f'Lista dos valores: {nums}.\nLista dos pares: {numspares}.\nLista dos ímpares: {numsimpares}.')
+print(), print('=-' * 35)
+print(f'Lista dos valores: {nums}.')
+print(f'Lista dos pares: {pares}.' if pares else 'Nenhum número par foi digitado.')
+print(f'Lista dos ímpares: {impares}.' if impares else 'Nenhum número ímpar foi digitado.')
+
+'''
+li = [pares, 'par', impares, 'ímpar']
+print(' '.join(f'Lista dos {li[c + 1] + "es"}: {li[c]}.' if li[c] else f'Nenhum nº {li[c + 1]} foi digitado.' for c in 
+range(0, len(li), 2)))
+
+for c in range(0, len(li), 2):
+    print(f'Lista dos {li[c + 1] + "es"}: {li[c]}.' if li[c] else f'Nenhum nº {li[c + 1]} foi digitado.')
+'''
+
 print('=-' * 35)
