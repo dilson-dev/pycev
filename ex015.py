@@ -1,5 +1,0 @@
-print('\033[33mAlugacar\033[1;30m, alugue um carro e dê um rolê pelo asfalto!\033[m')
-dias = int(input('\nPor quantos dias o carro foi alugado? '))
-km = float(input('Quantos km rodado(s)? '))
-total = (dias * 60) + (km * 0.15)
-print('\nO total a pagar é de \033[1;32mR${:.2f}\033[m.'.format(total))

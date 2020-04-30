@@ -1,9 +1,12 @@
 <h1 align="center">
-  <a href="https://www.youtube.com/cursosemvideo">
-    <img src="https://res.cloudinary.com/dvjpad4ch/image/upload/v1586445351/CursoEmVideoLogo_wpexsz.png" width="350px" />
-    
-  </a>
+    <a href='https://www.python.org/'>
+        <img style="border-radius: 50%;" src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"/>
+    </a>
+    <a href="https://www.youtube.com/cursosemvideo">
+        <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/8683385?s=200&v=4"/>
+    </a>
 </h1>
+
 
 ## Downloads
 
@@ -18,7 +21,7 @@
 - [Exercícios de Python 3](https://www.youtube.com/watch?v=nIHq1MtJaKs&list=PLHz_AreHm4dm6wYOIW20Nyg12TAjmMGT-)
 
 
-## Bibliotecas/módulos/packages instaladas:
+## Bibliotecas/Packages instaladas:
 
 - emoji versão 0.5.4
 - playsound 1.2.2
