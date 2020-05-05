@@ -1,9 +1,9 @@
 <h1 align="center">
     <a href='https://www.python.org/'>
-        <img style="border-radius: 50%;" src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"/>
+        <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"/>
     </a>
     <a href="https://www.youtube.com/cursosemvideo">
-        <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/8683385?s=200&v=4"/>
+        <img src="https://avatars3.githubusercontent.com/u/8683385?s=200&v=4"/>
     </a>
 </h1>
 
@@ -24,4 +24,4 @@
 ## Bibliotecas/Packages instaladas:
 
 - emoji versão 0.5.4
-- playsound 1.2.2
+- pygame / playsound 1.2.2
