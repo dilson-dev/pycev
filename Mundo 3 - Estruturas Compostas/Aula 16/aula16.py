@@ -16,6 +16,7 @@ print(c.index(20))
 # Se definir um segundo argumento este indicará a posição que deve iniciar a contagem.
 # Se o valor não estiver presente na tupla é exibido um erro.
 '''
+
 '''
 lanche = 'Hambúrguer'
 lanche = 'Suco'

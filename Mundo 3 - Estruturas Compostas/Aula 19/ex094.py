@@ -1,4 +1,4 @@
-#
+# Exercício Python #094 - Unindo dicionários e listas
 
 """
 DESAFIO 094
