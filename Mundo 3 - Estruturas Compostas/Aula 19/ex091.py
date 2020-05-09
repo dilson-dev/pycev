@@ -18,11 +18,14 @@ jogadores = {'jogador1': randint(1, 6),
 # Com compreensão de dicionários:
 # jogadores = {f'jogador {num}': randint(1, 6) for num in range(1, 5)}
 
+print('Valores sorteados no dado:')
 for k, v in jogadores.items():
-    print(f'\n{k} jogou o dado...')
-    sleep(1)
-    print(f'{k} tirou {v}.')
-    sleep(1)
+    # print(f'\n{k} jogou o dado...'), sleep(1)
+    print(f'{k} tirou {v}.'), sleep(1)
+
+# Compreensão de listas:
+# [(print(f'{k} tirou {v}.'), sleep(1)) for k, v in jogadores.items()]
+
 
 # Usando expressão lambda (Expressões lambdas são usadas para definir funções sem atribui-las)
 # ranking = sorted(jogadores.items(), key=lambda item: item[1], reverse=True)
@@ -58,9 +61,13 @@ print('-' * 32)
 for pos, (k, v) in enumerate(ranking, 1):  # for pos, tup in enumerate(ranking, 1):
     sleep(1)
     print(f'| {str(pos) + "º":^7} | {k:^9} | {v:^6} |')  # print(f'| {str(pos) + "º":^7} | {tup[0]:^9} | {tup[1]:^6} |')
+
+# Compreensão de listas:
+# [(sleep(1), print(f'| {str(pos) + "º":^7} | {k:^9} | {v:^6} |')) for pos, (k, v) in enumerate(ranking, 1)]
 '''
 
 # Posições iguais para pontuações iguais:
+
 posicao = 1
 for num in range(len(ranking)):
     if num == 0 or ranking[num][1] == ranking[num - 1][1]:
