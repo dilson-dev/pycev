@@ -98,18 +98,12 @@ for e in brasil:
     for k, v in e.items():
         print(f'O campo {k} tem valor {v}.')
 
+# Maneira alternativa que encontrei para fazer o mesmo que antes:
+for e in brasil:
+    print(f'{e["uf"]} = {e["sigla"]}')
 
 # Imprime apenas os valores dos dicionários dentro da lista brasil, na mesma linha.
 for e in brasil:
     for v in e.values():
         print(v, end=' ')
     print()
-
-    # Anotação trivial
-    # for uf, estado in e.values():  # uf, estado unpack in coleção
-    #     print(f'{uf} = {estado}')
-
-
-# Maneira alternativa que encontrei para fazer o mesmo que antes:
-for e in brasil:
-    print(f'{e["uf"]} = {e["sigla"]}')
