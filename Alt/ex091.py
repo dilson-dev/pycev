@@ -15,8 +15,7 @@ from time import sleep
 
 jogadores = {input(f'\nNome do jogador {i}: ').capitalize(): randint(1, 6) for i in range(1, 5)}
 
-for k, v in jogadores.items():
-    sleep(1), print(f'\n{k} tirou {v}.'), sleep(1)
+[(sleep(1), print(f'\n{k} tirou {v}.'), sleep(1)) for k, v in jogadores.items()]
 
 ranking = sorted(jogadores.items(), key=lambda item: item[1], reverse=True)
 
