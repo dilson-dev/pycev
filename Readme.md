@@ -7,11 +7,13 @@
     </a>
 </h1>
 
+## Anotações
+- [Py CeV Docs](https://docs.google.com/document/d/1C5HyQQ6Ms-Qccu8Y9tTskLOAyQ06VDnfP_4ndTNyTJM/edit?usp=sharing)
 
 ## Downloads
+- [Python 3](https://www.python.org/downloads/)
+- [PyCharm](https://www.jetbrains.com/pycharm/download/)
 
-- [Download do Python 3](https://www.python.org/downloads/)
-- [Download do Pycharm](https://www.jetbrains.com/pycharm/download/)
 
 
 ## Curso
@@ -21,7 +23,7 @@
 - [Exercícios de Python 3](https://www.youtube.com/watch?v=nIHq1MtJaKs&list=PLHz_AreHm4dm6wYOIW20Nyg12TAjmMGT-)
 
 
-## Bibliotecas/Packages instaladas:
 
-- emoji versão 0.5.4
+## Packages
+- emoji 0.5.4
 - pygame / playsound 1.2.2
