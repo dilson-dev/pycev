@@ -12,10 +12,10 @@ if d <= 200:
     p = 0.5 * d
 else:
     p = 0.45 * d
-print(
-    'o preço da viagem será de \033[1;32mR${:.2f}\033[m\033[1;34m.\nTenha uma boa viagem!'.format(p))
+print('o preço da viagem será de \033[1;32mR${:.2f}\033[m\033[1;34m.\nTenha uma boa viagem!'.format(p))
 
-# Código do vídeo:
+
+# Solução conforme o vídeo:
 """
 distancia = float(input('Qual é a distância da sua viagem? '))
 print('Você está prestes a começar uma viagem de {:.2f}Km.'.format(distancia))
