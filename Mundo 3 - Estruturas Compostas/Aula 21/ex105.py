@@ -2,8 +2,8 @@
 
 """
 DESAFIO 105
-Faça um programa que tenha uma função notas() que pode receber várias notas de alunos e vai retornar
-um dicionário com as seguintes informações:
+Faça um programa que tenha uma função notas() que pode receber várias notas de alunos e vai
+retornar um dicionário com as seguintes informações:
 
 - Quantidade de notas;
 - A maior nota;
@@ -12,16 +12,21 @@ um dicionário com as seguintes informações:
 - A situação (opcional).
 
 Adicione também as docstrings da função.
+
+# Última linha vídeo do exercício: Adicione também as docstrings.
 """
 
 
 def notas(*ns, sit=False):
     """
-    -> Função para analisar notas e situações de vários alunos.
-    :param n: uma ou mais notas dos alunos (aceita várias).
+    -> Analisa as notas e situação de vários alunos.
+    :param ns: uma ou mais notas dos alunos (aceita várias).
     :param sit: valor opcional, indicando se deve ou não adicionar a situação.
     :return: dicionário com várias informações sobre a situação da turma.
     """
+
+    # Removendo True e False da lista caso tenha usado a função de maneira errada
+    ns = tuple(valor for valor in ns if bool(valor) != valor)
 
     print('\n', '-' * 30, sep='')
 
@@ -44,6 +49,6 @@ def notas(*ns, sit=False):
 
 
 # Programa Principal
-info = notas(3.5, 2, 6.5, 2, 7, 4)
+info = notas(5.5, 2.5, 1.5, sit=True)  # notas(3.5, 2, 6.5, 2, 7, 4)
 print(info)
 help(notas)
