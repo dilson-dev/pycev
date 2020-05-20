@@ -19,7 +19,8 @@ for c in range(5):
         else:
             break
 
-    ''' # Outra maneira de definir a posição do número, porém mais complicada de entender:
+    # Outra maneira de definir a posição do número, porém mais complicada de entender:
+    '''
     while c != 0 and pos < len(nums) and num > nums[pos]:  # nums != [] and ... and ...
         pos += 1
     '''
@@ -39,7 +40,10 @@ print(), print('=-' * 35)
 print(f'Os valores digitados de forma ordenada foram: {nums}.')
 print('=-' * 35)
 
-''' # Solução do Professor Guanabara com uma técnica "diferente", diria até o inverso do que fiz na parte da posição.
+
+# Solução do Professor Guanabara com uma técnica "diferente", diria até o inverso do que fiz
+# na parte da posição.
+'''
 nums = []
 for c in range(5):
     num = int(input(f'\nDigite o {c + 1}º valor: '))

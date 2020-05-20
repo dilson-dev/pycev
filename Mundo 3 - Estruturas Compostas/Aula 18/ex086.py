@@ -27,7 +27,9 @@ for linha in range(3):
     for coluna in range(3):
         print(f'[{matriz[linha][coluna]:^5}]', end='' if coluna != 2 else '\n')
 
-'''  # Perguntando as dimensões da matriz
+
+# Perguntando as dimensões da matriz
+'''
 linhas = int(input('\nQuantas linhas? '))
 colunas = int(input('Quantas colunas? '))
 matriz = [[0] * colunas for linha in range(linhas)]
@@ -41,6 +43,7 @@ for linha in range(linhas):
     for coluna in range(colunas):
         print(f'[{matriz[linha][coluna]:^5}]', end='' if coluna != colunas - 1 else '\n')
 '''
+
 '''
 linhas = int(input('\nQuantas linhas? '))
 colunas = int(input('Quantas colunas? '))

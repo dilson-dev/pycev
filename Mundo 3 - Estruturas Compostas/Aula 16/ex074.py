@@ -10,8 +10,8 @@ Depois disso, mostre a listagem de números gerados e também indique o menor e 
 from random import randint
 # from random import sample
 
-limitnums = int(input('\nDigite até qual número quer sortear: '))
-quantnums = int(input('\nQuantos números quer sortear? '))
+limite = int(input('\nDigite até qual número quer sortear: '))
+quantidade = int(input('\nQuantos números quer sortear? '))
 
 '''
 nums = tuple(sample(range(limitnums + 1), quantnums))
@@ -20,14 +20,16 @@ for num in nums:
     print(num, end=' ')
 '''
 
-nums = ()  # nums = (randint(0, 10), randint(0, 10), randint(0, 10), randint(0, 10), randint(0, 10))
+nums = ()
+# nums = (randint(0, 10), randint(0, 10), randint(0, 10), randint(0, 10), randint(0, 10))
 # maiornum = menornum = 0
 
 print(f'\nValores sorteados:', end=' ')
 
-for c in range(quantnums):
-    nums += randint(0, limitnums),
+for c in range(quantidade):
+    nums += randint(0, limite),
     print(nums[c], end=' ')
+
     """
     if nums[c] > maiornum or c == 0:
         maiornum = nums[c]

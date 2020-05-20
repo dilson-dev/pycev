@@ -18,10 +18,12 @@ nums = (int(input('Digite um valor: ')),
         int(input('Digite o último valor: ')))
 '''
 
-nums = tuple(int(input(f'Digite o {i + 1}º numero: ')) for i in range(4))
+nums = tuple(int(input(f'Digite o {i+1}º numero: ')) for i in range(4))
 
-'''for c in range(1, 5):
-    nums += int(input(f'\nDigite o {c}º valor: ')),'''
+'''
+for c in range(1, 5):
+    nums += int(input(f'\nDigite o {c}º valor: ')),
+'''
 
 print(f'\nVocê digitou os valores: {nums}.')
 print(f'\nVezes que o nº 9 foi digitado: {nums.count(9)}.')

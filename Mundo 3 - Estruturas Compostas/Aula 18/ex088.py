@@ -40,11 +40,14 @@ for num, jogo in enumerate(palpites, 1):
 print('\n', '-=' * 5, f' < BOA SORTE! > ', '-=' * 5, sep='')
 
 
-# Com sample, sem firula, e com palpites alinhados e sleep, respectivamente:
+# Com sample, sem firula
 '''
 from random import sample as s
 [print(j) for j in (sorted(s(range(1, 61), 6)) for n in range(int(input('\nPalpites: '))))]
 '''
+
+
+# Com palpites alinhados e sleep
 '''
 from random import sample
 from time import sleep
