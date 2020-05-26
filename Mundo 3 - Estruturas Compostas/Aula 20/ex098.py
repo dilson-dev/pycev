@@ -9,9 +9,6 @@ Seu programa tem que realizar três contagens através da função criada:
 a) De 1 até 10, de 1 em 1;
 b) De 10 até 0, de 2 em 2;
 c) Uma contagem personalizada.
-
-* Divergência no enunciado do desafio nos vídeos da aula x exercício, "e realize a contagem" não
-aparece no enunciado do vídeo do exercício.
 """
 
 from time import sleep

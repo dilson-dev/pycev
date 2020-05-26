@@ -12,8 +12,6 @@ retornar um dicionário com as seguintes informações:
 - A situação (opcional).
 
 Adicione também as docstrings da função.
-
-# Última linha vídeo do exercício: Adicione também as docstrings.
 """
 
 
