@@ -15,4 +15,5 @@ print(f'O dobro de {moeda.moeda(preço)} é {moeda.dobro(preço, True)}')
 print(f'Aumentando 10%, temos {moeda.aumentar(preço, 10, True)}')
 print(f'Diminuindo 13%, temos {moeda.diminuir(preço, 13, True)}')
 
-# Tirar formatação pela chamada do usuário e irá colocar um parâmetro.
+# A formatação pela chamada da função é substituída pelo parâmetro, deixando o código mais
+# legível.

@@ -250,15 +250,10 @@ print(f'O fatorial de {num} é {fat}')
 # Assim vamos fazer isso para cada funcionalidade dentro do Pacote uteis:
 
 # Pasta uteis
-#   .
-#   .
-#   .  .  . Pasta cores
-#   .
-#   .  .  . Pasta datas
-#   .
-#   .  .  . Pasta números
-#   .
-#   .  .  . Pasta strings
+#   ├────── Pasta cores
+#   ├────── Pasta datas
+#   ├────── Pasta números
+#   └────── Pasta strings
 
 # Temos aqui então toda a organização do Projeto.
 
@@ -278,32 +273,31 @@ print(f'O fatorial de {num} é {fat}')
 # Assim dentro de cada uma das pastas terá que ter um arquivo __init__, e este arquivo
 # não pode se chamar apenas init, tem que ser __init__.py
 
-#    Pasta uteis
-#   .
-#   .
-#   .  .  . Pasta cores
-#   .             __init__.py
-#   .  .  . Pasta datas
-#   .             __init__.py
-#   .  .  . Pasta números
-#   .             __init__.py
-#   .  .  . Pasta strings
-#                 __init__.py
+#  Pasta uteis
+#    ├────── Pasta cores
+#    |           └───── __init__.py
+#    ├────── Pasta datas
+#    |           └───── __init__.py
+#    ├────── Pasta números
+#    |           └───── __init__.py
+#    └────── Pasta strings
+#                └───── __init__.py
 
 
 # Inclusive o Pacote principal uteis também pode ter um arquivo init:
 
-# Pasta uteis
-#   .   __init__.py
-#   .
-#   .  .  . Pasta cores
-#   .             __init__.py
-#   .  .  . Pasta datas
-#   .             __init__.py
-#   .  .  . Pasta números
-#   .             __init__.py
-#   .  .  . Pasta strings
-#                 __init__.py
+
+#  Pasta uteis
+#    |   └───── __init__.py
+#    ├─────── Pasta cores
+#    |           └───── __init__.py
+#    ├───────Pasta datas
+#    |           └───── __init__.py
+#    ├─────── Pasta números
+#    |           └───── __init__.py
+#    └─────── Pasta strings
+#                └───── __init__.py
+
 
 # Criamos então a pasta uteis com o arquivo __init__.py dentro desta, que é um arquivo
 # vazio.
