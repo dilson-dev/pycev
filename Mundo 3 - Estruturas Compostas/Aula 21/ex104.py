@@ -18,9 +18,10 @@ def leiaInt(msg=''):
     print('\n', '-' * 30, sep='')
     while True:
         num = input(msg).strip()
-        if num.replace('-', '', 1).isdigit():  # .isnumeric()
+        if num.replace('-', '', 1).isdigit():  # isnumeric()
             return int(num)
         print('\033[0;31mERRO! Digite um número inteiro válido.\033[m')
+        # print(f'\033[1;31mERRO! Valor "{num}" inválido.\033[m')
 
 
 # Programa Principal
