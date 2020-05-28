@@ -1,0 +1,16 @@
+Ana Paula Vieira;32
+Cláudio Mendonça;18
+Gustavo Guanabara;41
+Maria Clara Peixoto;65
+Maurício Souza;19
+Nilce Pedrosa;43
+Pedro Gonçalves;18
+Rafael Albuquerque;38
+Renata Soares;13
+Zuleide Lima;55
+Pedro Paulo Pereira;30
+José Alencar de Ramos;47
+José;39
+Maria;99
+José;99
+Creuza;48

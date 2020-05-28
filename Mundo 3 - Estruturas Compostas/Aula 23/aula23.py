@@ -15,21 +15,19 @@
 # Aprenderemos como tratar e tentar solucionar a maioria dos erros que acontecem em
 # nossos programas.
 
-# E ao falar de erros não está se tratando de erros como:
-# Exemplo: primt(x)
+# E ao falar de erros não está se tratando de erros como: primt(x)
 
 # Foi trocado a letra n pela letra m, sendo um erro de sintaxe.
 
-# É como se falasse poblema.
+# É como se falasse 'poblema'.
 
 # Foi errado sintaticamente, foi trocado as letras.
 
 # O Python e nenhuma linguagem de programação irá aceitar essa troca de letras.
 
-# Não é esse tipo de erro que está se referindo.
+# Não é esse tipo de erro a que está se referindo.
 
-# Está se referindo a outro tipo de erro:
-# Exemplo: print(x)
+# Está se referindo a outro tipo de erro: print(x)
 
 # Podes concluir que agora o programa está funcionando, pois não há erros sintáticos.
 # E esse é um erro muito comum de quem está começando.
@@ -39,7 +37,7 @@
 # Estar certo e estar livre de erros tem uma diferença muito grande.
 
 # Muitos iniciantes acham que se trocar a letra n do print pelo m está tudo bem, mas
-# não está, ou se esquecer os parênteses do print também não está tudo bem.
+# não está, ou se esquecer os parênteses do print, também não está tudo bem.
 # Isso porque o compilador dá erros de sintaxe, erros sintáticos no programa.
 # E erro sintático é só um tipo de erro, um erro fundamental, mas não é o único.
 
@@ -66,7 +64,7 @@
 
 # É um erro de significado, semântico.
 
-# Embora digite o comando certinho, isso pode acarretar um erro.
+# Embora digite o comando certinho, isso pode acarretar em um erro:
 
 # print(x)
 
@@ -101,11 +99,11 @@ NameError: name 'x' is not defined
 # O número 8 também funciona sem problemas:
 # Número: 8 -> Você digitou o número 8 -> Process finished with exit code 0
 
-# O comando está tecnicamente certo, correto, tanto é que funcionou.
+# O comando está tecnicamente certo/correto, tanto é que funcionou.
 
 # Só que existem algumas exceções.
 
-# Por exemplo, escrever o número por extenso como oito, 8 é um número só que o Python
+# Por exemplo, escrever o número por extenso como 'oito', 8 é um número só que o Python
 # não interpreta números por extenso como números, mas como strings.
 # Sendo assim:
 # Número: oito -> Process finished with exit code 1
@@ -125,17 +123,17 @@ ValueError: invalid literal for int() with base 10: 'oito
 # pela função int.
 # Isso também disparou para nós uma exceção, o ValueError.
 
-# Outro de exemplo de comando válido:
+# Outro exemplo de comando válido:
 # r = a / b
 
 # Sem problema, o comando está certo.
 
 # Exemplo de programinha para mostrar que está tudo funcionando corretamente:
 
-a = int(input('Numerador: '))  # Valor de cima de uma divisão
-b = int(input('Denominador: '))  # Valor debaixo de uma divisão
-r = a / b
-print(f'O resultado é {r}')
+# a = int(input('Numerador: '))  # Valor de cima de uma divisão
+# b = int(input('Denominador: '))  # Valor debaixo de uma divisão
+# r = a / b
+# print(f'O resultado é {r}')
 
 # Não há erro sintático nenhum. A variável foi declarada, está tudo certo.
 
@@ -279,3 +277,313 @@ ZeroDivisionError: division by zero
 #    <operação>
 # except:
 #    <falhou>
+
+
+# Programa de ler os dois números e dividir um pelo outro sem receber mensagem de erro.
+
+# Prática
+
+# a = int(input('Numerador: '))  # 8
+# b = int(input('Denominador: '))  # 0
+# r = a / b
+# print(f'O resultado é {r}')
+
+# Output: ZeroDivisionError
+
+# Ao invés de 'mandar' fazer tudo isso... Vamos fazer o seguinte:
+
+# try:  # tente fazer os comandos
+#     a = int(input('Numerador: '))
+#     b = int(input('Denominador: '))
+#     r = a / b
+# except:
+#     print('Infelizmente tivemos um problema :(')
+
+# print(f'O resultado é {r}')
+
+# Teste 1
+
+# Numerador: 5
+# Denominador: 2
+# O resultado é 2.5
+
+# Process finished with exit code 0
+
+# Funcionou o resultado é 2.5, sem problemas.
+
+
+# Teste 2
+
+# Numerador: oi
+# Infelizmente tivemos um problema :(
+# Traceback (most recent call last):
+#   File ".\aula23.py", line 8, in <module>
+#     print(f'O resultado é {r}')
+# NameError: name 'r' is not defined
+
+# Ocorreu um NameError porque tentou imprimir o r na tela.
+# Só irá fazer com que o r seja dividido, criado se não der erro na atribuição do a e do b.
+
+# Para isso também tem uma parte do comando.
+
+# Temos então:
+
+# try:  # Para tentar
+#     <operação>
+# except:  # Se der problema
+#     <falhou>
+
+# E se não der problema? Aí usamos o else:
+
+# try:
+#     <operação>
+# except:
+#     <falhou>
+# else:
+#     <deu certo>
+
+# Dentro da área do else irá dizer o que irá acontecer se deu certo, se o try deu certo.
+
+# try:  # Irá tentar fazer
+#     a = int(input('Numerador: '))
+#     b = int(input('Denominador: '))
+#     r = a / b
+# except:  # Se der problema
+#     print('Infelizmente tivemos um problema :(')
+# else:  # Se não
+#     print(f'O resultado é {r:.1f}')
+
+# Testes
+
+# Numerador: 5
+# Denominador: 3
+# O resultado é 1.7
+
+# Se por acaso der problema agora
+
+# Tentativa 2
+# Numerador: 5
+# Denominador: 0
+# Infelizmente tivemos um problema :(
+
+# Já não tem mais mensagem de erro. Isso é tratamento de erro.
+
+# Existe ainda uma outra cláusula que podemos colocar abaixo do else.
+# Essa última cláusula é o finally, que quer dizer 'finalmente'.
+# Esse vai acontecer independente se deu certo ou se deu erro.
+# É importante dizer que as cláusulas else e finally são opcionais, nem sempre é necessário
+# usá-las.
+
+# try:  # Irá tentar fazer
+#     a = int(input('Numerador: '))
+#     b = int(input('Denominador: '))
+#     r = a / b
+# except:  # Se der problema
+#     print('Infelizmente tivemos um problema :(')
+# else:  # Se não
+#     print(f'O resultado é {r:.1f}')
+# finally:  # Irá acontecer sempre.
+#     print('Volte sempre! Muito obrigado!')
+
+# Por exemplo, o finally pode ser usado para fechar um banco de dados, um arquivo aberto,
+# dando certo ou dando errado tem que fechar o banco, tem que fehcar o arquivo.
+
+
+# Testes
+
+# Numerador: 10
+# Denominador: 5
+# O resultado é 2.0
+# Volte sempre! Muito obrigado.
+
+# Numerador: 45
+# Denominador: nove
+# Infelizmente tivemos um problema :(
+# Volte sempre! Muito obrigado!
+
+# Inclusive é possível tratar esse erro, mostrar o que aconteceu.
+
+# É possível colocar do lado do except aquela palavrinha, que é aquela classe principal,
+# que é o Exception, com 'e' maiúsculo.
+
+# (...)
+# except Exception as erro:
+#    print('Infelizmente tivemos um problema :(')
+# (...)
+
+# Agora temos uma variável que é possível mostrar a formatação, ao invés de escrever
+# 'Infelizmente tivemos um problema' que é uma coisa genérica podemos escrever:
+
+# Ao escrever 'erro.' podemos ver que tem:
+# __cause__ = Causa
+# __class__ = Classe
+# __context__ = Contexto
+
+# Vamos então colocar a classe:
+
+# try:
+#     a = int(input('Numerador: '))
+#     b = int(input('Denominador: '))
+#     r = a / b
+# except Exception as erro:
+#     print(f'O problema encontrado foi {erro.__class__}')
+# else:
+#     print(f'O resultado é {r:.1f}')
+# finally:
+#     print('Volte sempre! Muito obrigado!')
+
+
+# Testes
+
+# Numerador: 10
+# Denominador: 2
+# O resultado é 5.0
+# Volte sempre! Muito obrigado!
+
+# Sem problemas, tudo funcionando
+
+# Agora se for:
+
+# Numerador: 5
+# Denominador: oi
+# O problema encontrado foi <class 'ValueError'>
+# Volte sempre! Muito obrigado!
+
+# Foi encontrado um erro de valor, assim, já foi dito qual é o tipo de exceção.
+
+# Numerador: 7
+# Denominador: 0
+# O problema encontrado foi <class 'ZeroDivisionError'>
+# Volte sempre! Muito obrigado!
+
+# Foi encontrado um erro de divisão por zero.
+
+# É claro que não irá mostrar isso para o usuário, mas enquanto estiver desenvolvendo.
+# O desenvolvedor irá poder capturar qual é o erro e mostrar na tela uma mensagem personalizada
+
+# E essa mensagem personalizada é possível porque a estrutura do try pode se expandir muito,
+# na verdade todo try pode ter mais de um except.
+# O except de cima tem que ter qual é o tipo de erro, o código da exceção, a classe da exceção.
+# Assim pode ter vários excepts para outros tipos de exceção e cada um deles terá seu próprio
+# bloco, mensagem e tratamento.
+
+# Assim um mesmo try pode ter vários excepts:
+
+# try:
+#     <operação>
+# except TypeError:
+#     <falhou>
+# except ValueError:
+#     <falhou>
+# except OSError:
+#     <falhou>
+# else:
+#     <deu certo>
+# finally:
+#     <certo/falha>
+
+
+# Assim podemos pegar o except anterior e ao invés de Exception e o except genérico de
+# 'tivemos um problema':
+
+# (...)
+# except Exception as erro:
+#     print(f'O problema encontrado foi {erro.__class__}')
+# (...)
+
+# Podemos fazer o seguinte, se o erro foi ValueError, erro de valor ou erro de tipo.
+# Podemos colocar entre parênteses quando temos mais de um erro para um except.
+
+# (...)
+# except (ValueError, TypeError):
+#     print('Tivemos um problema com os tipos de dados que você digitou.')
+# (...)
+
+# Assim podemos ter outros excepts com os tipos da exceção e a mensagem personalizada:
+
+# try:
+#     a = int(input('Numerador: '))
+#     b = int(input('Denominador: '))
+#     r = a / b
+# except (ValueError, TypeError):
+#     print('Tivemos um problema com os tipos de dados que você digitou.')
+# except ZeroDivisionError:
+#     print('Não é possível dividir um número por zero!')
+# except KeyboardInterrupt:
+#     print('O usuário preferiu não informar os dados!')
+# else:
+#     print(f'O resultado é {r:.1f}')
+# finally:
+#     print('Volte sempre! Muito obrigado!')
+
+# É possível também fazer um try para cada linha no código, ação, se não conseguir dá um
+# determinado erro.
+# Por exemplo tenta ler a variável a, se não dá um determinado erro, depois tenta ler a
+# variável b, mesma coisa, e depois tenta dividir a por b.
+
+# Então cada 'linha de código' pode ter um bloco try, apesar de o código ficar muito grande.
+
+# Sempre experimente o programa pelo 'certo', digitando dois números inteiros nesse caso:
+
+# Vamos ver então se o 'certo' está funcionando:
+
+# Numerador: 7
+# Denominador: 3
+# O resultado é 2.3
+# Volte sempre! Muito obrigado!
+
+# Agora vamos tentar forçar erros:
+
+# Numerador: 7
+# Denominador: 0
+# Não é possível dividir um número por zero!
+# Volte sempre! Muito obrigado!
+
+# Já conseguimos colocar um erro mais personalizado.
+
+
+# Numerador: 8
+# Denominador: dois
+# Tivemos um problema com os tipos de dados que você digitou.
+# Volte sempre! Muito obrigado!
+
+
+# Vamos tentar deixar vazio o primeiro número:
+
+# Numerador:
+# Tivemos um problema com os tipos de dados que você digitou.
+# Volte sempre! Muito obrigado!
+
+
+# Pode digitar 200, e aí não quer mais digitar o denominador, pode digitar Ctrl+C no teclado,
+# ou vai no PyCharm e aperta o botão vermelho de 'stop', e aí ocorre a exceção do
+# KeyboardInterrupt.
+
+# Numerador: 200
+# Denominador: O usuário preferiu não informar os dados!
+# Volte sempre! Muito obrigado!
+
+
+# Agora não há mais aquelas mensagens de erro, e inclusive é possível até fazer um erro
+# genérico.
+
+# É possível fazer isso durante o desenvolvimento para sempre mostrar o erro, por exemplo
+# pode colocar a causa, assim será mostrado a causa do erro na tela quando o except genérico
+# ocorrer.
+
+try:
+    a = int(input('Numerador: '))
+    b = int(input('Denominador: '))
+    r = a / b
+except (ValueError, TypeError):
+    print('Tivemos um problema com os tipos de dados que você digitou.')
+except ZeroDivisionError:
+    print('Não é possível dividir um número por zero!')
+except KeyboardInterrupt:
+    print('O usuário preferiu não informar os dados!')
+except Exception as erro:
+    print(f'O erro encontrado foi {erro.__cause__}.')
+else:
+    print(f'O resultado é {r:.1f}')
+finally:
+    print('Volte sempre! Muito obrigado!')
